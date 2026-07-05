@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Compare Sites | UrbanPulse Zimbabwe</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header class="navbar">
+
+<a href="index.html" class="logo-section">
+
+<img src="images/urban pulse logo.png" class="logo">
+
+<div>
+<h2>UrbanPulse</h2>
+<p>ZIMBABWE</p>
+</div>
+
+</a>
+
+<div class="header-links">
+<a href="analyze.html" class="back-link">+ Analyze Site</a>
+<a href="index.html" class="back-link">← Home</a>
+</div>
+
+</header>
+
+<main class="report-page">
+
+<section class="report-hero">
+
+<div>
+
+<p class="section-label">
+COMPARATIVE ANALYSIS
+</p>
+
+<h1>
+Compare Development Opportunities
+</h1>
+
+<p class="section-subtitle">
+Select two saved UrbanPulse reports and compare their investment potential side-by-side.
+</p>
+
+</div>
+
+</section>
+
+<section class="report-grid">
+
+<div class="report-card-large">
+
+<div class="card-heading">
+<p>SITE A</p>
+<h2>First Development</h2>
+</div>
+
+<select id="siteA" class="compare-select">
+
+<option value="">
+Select first report
+</option>
+
+</select>
+
+</div>
+
+<div class="report-card-large">
+
+<div class="card-heading">
+<p>SITE B</p>
+<h2>Second Development</h2>
+</div>
+
+<select id="siteB" class="compare-select">
+
+<option value="">
+Select second report
+</option>
+
+</select>
+
+</div>
+
+</section>
+
+<section class="recommendation-card verdict-card">
+
+<p class="section-label">
+OVERALL RESULT
+</p>
+
+<h2 id="winnerTitle">
+Run a comparison
+</h2>
+
+<p id="winnerText">
+Select two saved reports to discover which site offers the stronger development opportunity.
+</p>
+
+</section>
+
+<section class="report-card-large">
+
+<div class="card-heading">
+
+<p>HEAD TO HEAD</p>
+
+<h2>
+Comparison Matrix
+</h2>
+
+</div>
+
+<table class="compare-table">
+
+<thead>
+
+<tr>
+
+<th>Metric</th>
+
+<th id="siteAHeading">
+Site A
+</th>
+
+<th id="siteBHeading">
+Site B
+</th>
+
+<th>
+Winner
+</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+<td>Buy Score</td>
+<td id="tableAScore">-</td>
+<td id="tableBScore">-</td>
+<td id="winnerScore">-</td>
+</tr>
+
+<tr>
+<td>Roi</td>
+<td id="tableARoi">-</td>
+<td id="tableBRoi">-</td>
+<td id="winnerRoi">-</td>
+</tr>
+
+<tr>
+<td>Risk Rating</td>
+<td id="tableARisk">-</td>
+<td id="tableBRisk">-</td>
+<td id="winnerRisk">-</td>
+</tr>
+
+<tr>
+<td>Development Potential</td>
+<td id="tableAPotential">-</td>
+<td id="tableBPotential">-</td>
+<td id="winnerPotential">-</td>
+</tr>
+
+<tr>
+<td>Best Use</td>
+<td id="tableABestUse">-</td>
+<td id="tableBBestUse">-</td>
+<td id="winnerBestUse">-</td>
+</tr>
+
+<tr>
+<td>Buildable Area</td>
+<td id="tableABuildable">-</td>
+<td id="tableBBuildable">-</td>
+<td id="winnerBuildable">-</td>
+</tr>
+
+<tr>
+<td>Accessibility Score</td>
+<td id="tableAAccess">-</td>
+<td id="tableBAccess">-</td>
+<td id="winnerAccess">-</td>
+</tr>
+
+<tr>
+<td>Infrastructure</td>
+<td id="tableAInfrastructure">-</td>
+<td id="tableBInfrastructure">-</td>
+<td id="winnerInfrastructure">-</td>
+</tr>
+
+</tbody>
+
+</table>
+<section class="report-grid">
+
+<div class="report-card-large">
+
+<div class="card-heading">
+<p>WINNING CATEGORIES</p>
+<h2>Site A Advantages</h2>
+</div>
+
+<ul id="siteAWins" class="report-list">
+</ul>
+
+</div>
+
+<div class="report-card-large">
+
+<div class="card-heading">
+<p>WINNING CATEGORIES</p>
+<h2>Site B Advantages</h2>
+</div>
+
+<ul id="siteBWins" class="report-list">
+</ul>
+
+</div>
+
+</section>
+</section>
+
+<section class="kpi-grid">
+
+<div class="kpi-card">
+
+<p>Better Investment</p>
+
+<h2 id="recommendedSite">
+—
+</h2>
+
+<span>
+Highest overall score
+</span>
+
+</div>
+
+<div class="kpi-card">
+
+<p>Score Difference</p>
+
+<h2 id="scoreDifference">
+—
+</h2>
+
+<span>
+Difference in Buy Score
+</span>
+
+</div>
+
+<div class="kpi-card">
+
+<p>Higher ROI</p>
+
+<h2 id="higherROI">
+—
+</h2>
+
+<span>
+Estimated return
+</span>
+
+</div>
+
+<div class="kpi-card">
+
+<p>Lower Risk</p>
+
+<h2 id="lowerRisk">
+—
+</h2>
+
+<span>
+Investment risk
+</span>
+
+</div>
+
+</section>
+
+<section class="recommendation-card">
+
+<p class="section-label">
+
+URBANPULSE INSIGHT
+
+</p>
+
+<h2>
+
+Decision Support
+
+</h2>
+
+<p>
+
+UrbanPulse compares both sites using the same evaluation model,
+allowing developers and investors to quickly identify the stronger
+development opportunity before commissioning detailed feasibility
+studies.
+
+</p>
+
+</section>
+
+</main>
+
+<script src="compare.js"></script>
+
+</body>
+
+</html>
