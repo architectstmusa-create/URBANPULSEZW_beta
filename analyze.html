@@ -2,135 +2,224 @@
 <html lang="en">
 
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Analyze Site | UrbanPulse Zimbabwe</title>
+    <title>Analyze Site | UrbanPulse Zimbabwe</title>
 
-<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
 </head>
 
 <body>
 
 <header class="navbar">
-  <div class="logo-section">
-    <img src="images/urban pulse logo.png" alt="UrbanPulse Logo" class="logo">
 
-    <div>
-      <h2>UrbanPulse</h2>
-      <p>ZIMBABWE</p>
+    <a href="index.html" class="logo-section">
+        <img src="images/urban pulse logo.png" alt="UrbanPulse Logo" class="logo">
+
+        <div>
+            <h2>UrbanPulse</h2>
+            <p>ZIMBABWE</p>
+        </div>
+    </a>
+
+    <div class="header-links">
+        <a href="compare.html" class="back-link">Compare Sites</a>
+        <a href="index.html" class="back-link">← Back to Home</a>
     </div>
-  </div>
 
-  <a href="index.html" class="back-link">← Back to home</a>
 </header>
 
 <main class="analyze-page">
 
 <section class="analyze-panel">
 
-  <div class="form-card">
+<div class="form-card">
 
-    <h1>Site details</h1>
+<h1>Analyse a Development Site</h1>
 
-    <p>
-      Enter a location or click directly on the map. UrbanPulse will use this information
-      to generate a preliminary development intelligence report.
-    </p>
+<p>
+Enter an address, paste a Google Maps link, type coordinates,
+or simply click on the map. UrbanPulse will analyse the site
+and generate a development intelligence report.
+</p>
 
-    <form id="siteForm">
+<form id="siteForm">
 
-      <div class="form-grid">
+<div class="form-grid">
 
-        <div class="field">
-          <label>Country</label>
-          <select id="country">
-            <option>Zimbabwe</option>
-          </select>
-        </div>
+<div class="field">
+<label>Country</label>
 
-        <div class="field">
-          <label>City</label>
-          <select id="city">
-            <option>Harare</option>
-            <option>Bulawayo</option>
-            <option>Mutare</option>
-            <option>Gweru</option>
-            <option>Masvingo</option>
-            <option>Victoria Falls</option>
-          </select>
-        </div>
+<select id="country">
+<option>Zimbabwe</option>
+</select>
+</div>
 
-        <div class="field">
-          <label>Site Location or Address</label>
-          <input id="location" type="text" placeholder="e.g. Borrowdale, Harare" required>
-          <small>Type a suburb/address, then click outside the box to update the map.</small>
-        </div>
+<div class="field">
+<label>City</label>
 
-        <div class="field">
-          <label>Coordinates</label>
-          <input id="coordinates" type="text" placeholder="-17.7831, 31.0543">
-          <small>Auto-filled when you type a location or click the map.</small>
-        </div>
+<select id="city">
+<option>Harare</option>
+<option>Bulawayo</option>
+<option>Mutare</option>
+<option>Gweru</option>
+<option>Masvingo</option>
+<option>Victoria Falls</option>
+</select>
+</div>
 
-        <div class="field">
-          <label>Site Area</label>
-          <input id="area" type="number" placeholder="2400" required>
-        </div>
+<div class="field">
+<label>Site Location / Address</label>
 
-        <div class="field">
-          <label>Unit</label>
-          <select id="unit">
-            <option value="sqm">Square metres (m²)</option>
-            <option value="hectares">Hectares</option>
-          </select>
-        </div>
+<input
+id="location"
+type="text"
+placeholder="e.g. Borrowdale, Harare">
 
-      </div>
+<small>
+Type the suburb, address or stand location.
+</small>
 
-      <div class="field">
-        <label>Development Type</label>
+</div>
 
-        <div class="type-buttons">
-          <button type="button" class="type-btn active" data-type="Residential">Residential</button>
-          <button type="button" class="type-btn" data-type="Mixed-use">Mixed-use</button>
-          <button type="button" class="type-btn" data-type="Commercial">Commercial</button>
-        </div>
+<div class="field">
+<label>Google Maps Link</label>
 
-        <input type="hidden" id="developmentType" value="Residential">
-      </div>
+<input
+id="mapLink"
+type="text"
+placeholder="Paste Google Maps URL">
 
-      <div class="form-actions">
-        <button type="submit" class="primary-submit">
-          Run Site Analysis →
-        </button>
+<small>
+UrbanPulse can automatically extract coordinates.
+</small>
 
-        <span>Estimated time: under 30 seconds.</span>
-      </div>
+</div>
 
-    </form>
+<div class="field">
+<label>Coordinates</label>
 
-  </div>
+<input
+id="coordinates"
+type="text"
+placeholder="-17.783100, 31.054300">
 
-  <div class="map-card">
+<small>
+Automatically filled after selecting a location.
+</small>
 
-    <div class="map-header">
-      <div>
-        <p>PREVIEW</p>
-        <h2>Site Location Preview</h2>
-      </div>
+</div>
 
-      <span>LIVE MAP</span>
-    </div>
+<div class="field">
+<label>Site Area</label>
 
-    <div id="map"></div>
+<input
+id="area"
+type="number"
+placeholder="2400"
+required>
 
-  </div>
+</div>
+
+<div class="field">
+<label>Unit</label>
+
+<select id="unit">
+<option value="sqm">Square Metres (m²)</option>
+<option value="hectares">Hectares</option>
+</select>
+
+</div>
+
+</div>
+
+<div class="field">
+
+<label>Development Type</label>
+
+<div class="type-buttons">
+
+<button
+type="button"
+class="type-btn active"
+data-type="Residential">
+
+Residential
+
+</button>
+
+<button
+type="button"
+class="type-btn"
+data-type="Mixed-use">
+
+Mixed-use
+
+</button>
+
+<button
+type="button"
+class="type-btn"
+data-type="Commercial">
+
+Commercial
+
+</button>
+
+</div>
+
+<input
+type="hidden"
+id="developmentType"
+value="Residential">
+
+</div>
+
+<div class="form-actions">
+
+<button
+type="submit"
+class="primary-submit">
+
+Run Site Analysis →
+
+</button>
+
+<span>
+Estimated analysis time: under 30 seconds.
+</span>
+
+</div>
+
+</form>
+
+</div>
+
+<div class="map-card">
+
+<div class="map-header">
+
+<div>
+
+<p>LIVE PREVIEW</p>
+
+<h2>Selected Site</h2>
+
+</div>
+
+<span>INTERACTIVE MAP</span>
+
+</div>
+
+<div id="map"></div>
+
+</div>
 
 </section>
 
