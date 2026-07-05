@@ -829,3 +829,145 @@ footer p{
     margin:30px 24px 70px;
   }
 }
+.logo-link{
+  text-decoration:none;
+  color:inherit;
+}
+
+.logo-link:hover{
+  opacity:0.9;
+}
+
+.yield-note {
+  margin-top: 18px;
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: #6f746d;
+}
+/* PDF export fixes */
+.pdf-exporting .report-actions,
+.pdf-exporting #downloadPdf,
+.pdf-exporting .download-btn {
+  display: none !important;
+}
+
+.report-card-large,
+.report-card,
+.kpi-card,
+.recommendation-card,
+.verdict-card {
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+.report-grid,
+.kpi-grid {
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+@media print {
+  .report-actions,
+  #downloadPdf,
+  .download-btn,
+  .navbar {
+    display: none !important;
+  }
+
+  body {
+    background: #f4f0e8;
+  }
+
+  .report-page {
+    padding: 0;
+  }
+}
+/* Compare Sites Page */
+
+.header-links {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+
+.compare-select {
+  width: 100%;
+  padding: 16px 18px;
+  border-radius: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  background: #fffaf3;
+  font-family: Inter, sans-serif;
+  font-size: 1rem;
+  outline: none;
+}
+
+.compare-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Inter, sans-serif;
+}
+
+.compare-table th,
+.compare-table td {
+  padding: 18px 16px;
+  text-align: left;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.compare-table th {
+  color: #9b0712;
+  font-weight: 800;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.compare-table td:first-child {
+  color: #666;
+  font-weight: 600;
+}
+
+.compare-table td:not(:first-child) {
+  font-weight: 800;
+  color: #111;
+}
+
+@media (max-width: 800px) {
+  .header-links {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+  }
+
+  .compare-table {
+    font-size: 0.85rem;
+  }
+
+  .compare-table th,
+  .compare-table td {
+    padding: 12px 8px;
+  }
+}
+/* Compare page polish */
+
+.compare-select:focus {
+  border-color: #9b0712;
+  box-shadow: 0 0 0 4px rgba(155, 7, 18, 0.08);
+}
+
+.compare-table tr:hover td {
+  background: rgba(155, 7, 18, 0.04);
+}
+
+.compare-table td:nth-child(2),
+.compare-table td:nth-child(3) {
+  background: rgba(255, 250, 243, 0.75);
+}
+
+.verdict-card {
+  border-left: 6px solid #d17936;
+}
+
+.header-links a {
+  white-space: nowrap;
+}
